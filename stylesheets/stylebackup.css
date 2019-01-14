@@ -1,0 +1,244 @@
+@font-face {
+    font-family: BusinessHistory-Regular;
+    src: url(fonts/Business-History/BusinessHistory-Regular.woff);
+}
+
+@font-face {
+  font-family:"VG5000-Regular";
+  src: url("../fonts/VG5000-Regular.woff");
+}
+
+img{
+  z-index: 14;
+}
+
+.video{
+  z-index: 20;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px transparent; 
+    border-radius: 0px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: transparent; 
+    border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: transparent; 
+}
+
+/* ************************************************ WORD GRID START ************************************************ */
+.square-grid {
+  width: 100%;
+  float: right; 
+  margin-right: 0.5%;
+  margin-left: 1%;
+  margin-top: 4%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*box-shadow: 0 0 0 10px yellow;*/
+  background-color: transparent;
+}
+.square-grid__cell {
+  background-color: transparent;  
+/*  box-shadow: 0 0 0 10px yellow;*/
+  overflow: hidden;
+  position: relative;
+  /*border-width:0.1px;  
+    border-style:solid;*/
+}
+.square-grid__content {
+  left: 0;
+  font-family: VG5000-Regular;
+  position: absolute;
+  top: 0;
+  font-size:1vw;
+  margin-right:1vw;
+  margin-left:1vw;
+  color: transparent;
+}
+.square-grid__content:hover {
+  left: 0;
+  position: absolute;
+  top: 0;
+  font-size:0.8vw;
+  margin-right:1vw;
+  margin-left:1vw;
+  color: black/*#8080ff*/;
+  font-family: VG5000-Regular;
+}
+.square-grid__cell:after {
+  content: '';
+  display: inline-block;
+  padding-bottom: 100%;
+}
+.square-grid__cell--7 {
+  flex-basis: 30%;
+}
+
+/* ************************************************ WORD LINKS START ************************************************ */
+.wordLink{
+  color: black/*#8080ff*/;
+  font-size: 1.5vw;
+  background-color: #ffff00 /*#fbff44*/;
+  cursor: crosshair;
+  font-family: VG5000-Regular;
+}
+.wordLink:hover{
+  color: white;
+  background-color: black;
+}
+  
+.draggable { width: 20%; height: auto;}
+
+/* ************************************************ HEADERS ************************************************ */
+.headers{width: 100%; margin-top: 0%; margin-left: 8%; margin-bottom: 40%;}
+h1{font-size: 2.7vw; font-family: VG5000-Regular; color: #ff7200; word-spacing: 0.15vw; /*box-shadow: 8px 0 10px 10px #b6abc6;*/ height:auto;}
+.header1{width:50%; height: auto; margin-top: 0%; margin-left: 0%; margin-right: 1%; float: left; z-index: 1; /*background-color: red;*/}
+h2{font-size: 8vw; font-family: VG5000-Regular; color: #ff7200; /*word-spacing: 0.15vw;*/ float: right; margin-right: 1%; margin-top: 0vw;}
+.header2{background-color: #ff7200; height: 10px; margin-top:5%;  margin-right: 10%; float: right; z-index: 1; text-align: right; margin-left: -10%;}
+h3{font-size: 2.5vw; font-family: VG5000-Regular; color: #ff7200; word-spacing: 0.15vw; float: right; margin-right: 1%;}
+.header3{width:70%; margin-top:-2.5%;  margin-right: 10%; float: right; z-index: 1; text-align: right; margin-left: -10%;}
+
+
+/* ************************************************ BODY TEXT ************************************************ */
+.draggable_text{height: auto; width: 90%; position: relative; z-index: 0; margin-top: 0%; margin-left: 8%; margin-right: 4%;}
+.paragraph{margin-left:1%; text-align: justify; text-indent: 2.7vw; font-size: 1.3vw; font-family: VG5000-Regular; color: #ff7200 ; word-spacing: 0vw; /*letter-spacing: 0.01vw;*/ margin-right: 2%; line-height: 150%; word-break: keep-all; background-color: transparent;}
+.abstract{margin-left:27%; text-align: justify; text-indent: 2.7vw; font-size: 0.9vw; font-family: VG5000-Regular; color: #ff7200; word-spacing: 0vw; /*letter-spacing: 0.01vw;*/ margin-right: 2%; line-height: 150%; word-break: keep-all; background-color: white;}
+.colophon{margin-left:1%; text-align: justify; font-size: 1vw; font-family: VG5000-Regular; color: black; word-spacing: 0vw; /*letter-spacing: 0.01vw;*/ margin-right: 2%; line-height: 150%; word-break: keep-all; background-color: transparent;}
+.containerColophon{height: auto; width: 90%; position: relative; z-index: 0; margin-top: 0%; margin-left: 8%; margin-right: 4%;}
+
+/*#b{ margin-top: 50%; margin-left: 40%;}
+#c{ margin-top: 100%; margin-left: 40%;}
+#d{ margin-top: 150%; margin-left: 50%;}*/
+
+.highlighted {
+  background-color: black;
+  color: white;
+}
+
+/* ************************************************ WEBPAGE ************************************************ */
+#webpage{
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-top: 0.5%;
+  margin-left: 0%;
+  margin-bottom: 0.5%;
+  display: inline-block;
+}
+
+/* ************************************************ CONTAINER STYLES START ************************************************ */
+#container1 {
+width: 45%; 
+height: auto; 
+margin-top: 1%; 
+margin-right:1%; 
+float:right; 
+display:block; 
+box-shadow: 8px 0 15px 15px #b6abc6; 
+z-index:3; 
+/*margin-top: 1%; float: right; margin-right: 1%;*/
+}
+#container2 {
+width: 40%; 
+height:auto; 
+margin-top: 1%; 
+margin-left: 10%; 
+position: absolute; 
+display: inline-block; 
+float: left; 
+overflow-x:scroll; 
+overflow-y:scroll; 
+box-shadow: 8px 0 90px 90px #b6abc6 /*#050dff*/; 
+z-index:1;
+cursor: move; 
+/*width: 10%; height:100%; margin-top: 0%; float: left; background-color: green; margin-left: 11%; z-index: 2;*/
+}
+#container3 {
+ width: 4%; 
+ height: 100%;
+ top:0;
+ margin-top: 0%; 
+ left:0;
+ margin-left: 1%; 
+ box-shadow: 8px 0 170px 170px #ededed;  
+ z-index:2; 
+ position: fixed;
+ 
+}
+/*#container4{background-color:transparent; width: 30%; height:20%; margin-top: 45%; margin-left: 10%; position: fixed; display: inline-block; float: left; overflow-x:scroll; overflow-y:scroll; box-shadow: 2px 0 20px 10px #b6abc6; z-index: 13;}*/
+/* ************************************************ CONTAINER STYLES END ************************************************ */
+
+/* ************************************************ PAGES STYLES START ************************************************ */
+#page4{ margin-top: 0.5%; background-color: transparent; height: auto; margin-right: 2%; display: inline-block;/*box-shadow: 8px 0 900px 5px #ededed;*/}
+#page3{ margin-top: 0.5%; background-color: transparent; height: auto; margin-right: 2%; display: inline-block;/*box-shadow: 8px 0 900px 5px #ededed;*/}
+#page2{ margin-top: 0.5%; background-color: transparent; height: auto; margin-right: 2%; display: inline-block;/*box-shadow: 8px 0 900px 5px #ededed;*/}
+#page1{ margin-top: 0.5%; background-color: transparent; height: auto; margin-right: 2%; display: inline-block;/*width:50%;*//*box-shadow: 8px 0 900px 5px #ededed;*/}
+#page0{ margin-top: 0.5%; background-color: transparent; height: auto; margin-right: 2%; display: inline-block;/*width:50%;*//*box-shadow: 8px 0 900px 5px #ededed;*/}
+
+/* ************************************************ PAGES STYLES END ************************************************ */
+/* ************************************************ NAVIGATION START ************************************************ */
+.navigation{
+/*  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);*/
+  font-family: VG5000-Regular;
+  height: auto;
+  background-color:transparent;
+  font-size: 1.2vw;
+  white-space: normal;
+  top: 100%;
+
+}
+.navigationText{
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+   transform: rotate(-90deg);
+}
+
+a{text-decoration: none; color: #ff7200;/*color: #8080ff;*/}
+a:hover{text-decoration: none; color: black; background-color:  #b6abc6; }
+/* ************************************************ NAVIGATION END ************************************************ */
+/* ************************************************ REFERENCES START ************************************************ */
+.draggable_references{
+height: auto; width: 40%; position: relative; z-index: 0; margin-top: 0%; float: right; margin-right: 4%;
+}
+.references{
+  width:100%;
+  height: auto;
+  color:#ff7200;
+  font-family: VG5000-Regular;
+  font-size:0.7em;
+  line-height: 2em;
+  padding-top: 0.2%;
+  padding-left: 0.2%;
+  padding-right: 0.2%;
+  padding-top: 0.2%;
+  word-wrap: break-word;
+  background-color: white;
+  z-index: 4;
+ 
+  /*padding-left:1%;*/
+}
+/* ************************************************ REFERENCES END ************************************************ */
+
+
+
